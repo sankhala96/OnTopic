@@ -1,0 +1,21 @@
+#comment{
+    background-color: #ffffff;
+}
+
+#user{
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#comment-box{
+    display: inline-block;
+    margin: 20px;
+}
+
+textarea[name=body]{
+    background-color: #dddddd;
+    padding: 10px;
+}

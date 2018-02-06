@@ -1,0 +1,19 @@
+#question-form{
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+input[type=text]{
+    padding: 12px;
+    background-color: #dddddd;
+}
+
+input[name=category]{
+    padding: 10px;
+    width: 250px;
+}
+
+textarea[name=desc]{
+    padding: 12px;
+    background-color: #dddddd;
+}

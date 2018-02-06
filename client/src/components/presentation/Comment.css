@@ -1,0 +1,53 @@
+#comment-detail{
+    background-color: #ffffff;
+    height: 150px;
+    margin-bottom: 40px;
+}
+
+#user{
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#detail{
+    display: inline-block;
+    margin: 20px;
+}
+
+#detail p{
+    height: 60px;
+}
+
+#detail hr{
+    margin: 0;
+    width: 100%;
+}
+
+#voting-comment{
+    height: 30px;
+}
+
+#votebox-comment{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.vote {
+    cursor: pointer;
+}
+
+.vote-count{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+#upvote {
+    color: green;
+}

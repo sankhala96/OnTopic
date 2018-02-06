@@ -1,0 +1,41 @@
+#main{
+    padding: 0;
+    background-color: #ffffff;
+}
+
+#image-header{
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Sidebar styling - the entire ul list */
+#sidebar-nav {
+    list-style: none;
+    background-color: white;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0;
+    padding: 15px 15px;
+}
+
+#category{
+    padding: 0;
+}
+
+#category li{
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+#page-content {
+    width: 100%;
+    position: absolute;
+    padding-left: 80px;
+    background-color: #ffffff;
+    /*border: 5px solid blue;*/
+}
+
+#content{
+    background-color: #dddddd;
+}
