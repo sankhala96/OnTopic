@@ -26,9 +26,9 @@ export function sendConfirmationEmail(user) {
     const email ={
         from,
         to: user.email,
-        subject: 'Welcome to AlHub',
+        subject: 'Welcome to OnTopic',
         text: `
-        welcome to AlHub please confirm your email.
+        welcome to OnTopic please confirm your email.
         
         ${user.generateConfirmationUrl()}
         `
