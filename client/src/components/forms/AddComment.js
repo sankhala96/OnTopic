@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import gravatarUrl from "gravatar-url"
 import './AddComment.css'
 
 class AddComment extends React.Component{
