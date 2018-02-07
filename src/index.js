@@ -19,7 +19,7 @@ app.use("/api/auth", auth);
 app.use("/api/users", users);
 
 app.get('*/',(req,res) => {
-    res.sendFile(path.join(__dirname,'index.html'));
+    res.sendFile(path.join(__dirname,'../client/build','index.html'));
 });
 
 app.listen(process.env.PORT || 5000, () => console.log('running on localhost 5000'));
