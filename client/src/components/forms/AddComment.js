@@ -44,7 +44,8 @@ class AddComment extends React.Component{
             <div id="comment">
                 <div id="user">
                     <img className="img-fluid rounded-circle"
-                         src={gravatarUrl('test@test.com', { size: 60, default: 'monsterid'})}
+                         src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                         style={{width: "60px"}}
                          alt="Gravatar"/><br/>
                     <hr/>
                     <span>{this.props.username}</span>
