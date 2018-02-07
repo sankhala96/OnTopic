@@ -1,6 +1,5 @@
 import React from 'react'
 import './Comment.css'
-import gravatarUrl from "gravatar-url"
 import {connect} from 'react-redux'
 import { getCommentVote} from '../../actions/users'
 
@@ -54,7 +53,8 @@ class Comment extends React.Component {
             <div className="container" id="comment-detail">
                 <div id="user">
                     <img className="img-fluid rounded-circle"
-                         src={gravatarUrl('test@test.com', { size: 60, default: 'monsterid'})}
+                         src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                         style={{width: "60px"}}
                          alt="Gravatar"/><br/>
                     <hr/>
                     <span>{username}</span>

@@ -16,7 +16,6 @@ import {
 import { connect } from "react-redux";
 import { NavLink as RouterNavLink } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import gravatarUrl from "gravatar-url";
 import * as actions from "../../actions/auth";
 import { setLocale } from "../../actions/locale"
 
@@ -90,7 +89,8 @@ class TopNavigation extends React.Component {
                                 <DropdownToggle nav>
                                     <img
                                         className="img-fluid rounded-circle"
-                                        src={gravatarUrl(user.email, { size: 60, default: 'mm' })}
+                                        src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                                        style={{width: "60px"}}
                                         alt="Gravatar"
                                     />
                                 </DropdownToggle>

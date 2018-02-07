@@ -1,6 +1,5 @@
 import React from 'react'
 import './TopicDetail.css'
-import gravatarUrl from "gravatar-url"
 import {connect} from 'react-redux'
 import {getVote} from '../../actions/users'
 
@@ -55,7 +54,8 @@ class TopicDetail extends React.Component{
                 <div className="container" id="question-detail">
                     <div id="user">
                         <img className="img-fluid rounded-circle"
-                             src={gravatarUrl(this.props.user.email, { size: 60, default: 'mm'})}
+                             src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                             style={{width: "60px"}}
                              alt="Gravatar"/><br/>
                         <hr/>
                         <span>{username}</span>
