@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-const from = '"AlHub" <info@alhub.com>';
+const from = '"OnTopic" <info@OnTopic.com>';
 
 function setup() {
     return nodemailer.createTransport({
