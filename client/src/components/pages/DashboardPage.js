@@ -8,14 +8,10 @@ import Topics from '../containers/Topics'
 
 class DashboardPage extends React.Component {
     state = {
-        isOpen: true,
         list: ["All", "CS-IT", "Electronics", "Mechanical", "Civil", "Commerce"],
         selected: ''
     };
 
-    toggle = () => {
-        this.setState({ isOpen: !this.state.isOpen });
-    };
 
     handleSelect =(item) =>{
         //event.preventDefault();

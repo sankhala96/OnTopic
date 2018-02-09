@@ -48,7 +48,7 @@ class Topics extends React.Component{
         });
         return(
             <div>
-                <ol>
+                <ol style={{padding: '0'}}>
                     {listItem}
                 </ol>
             </div>

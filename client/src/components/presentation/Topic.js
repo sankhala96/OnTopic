@@ -79,14 +79,13 @@ class Topic extends React.Component {
                     </div>
                     <div className="detail">
                         <div id="detail-inner">
-                            <i className="fa fa-comment" style={{fontSize: "42px"}}></i>
-                            <span>{this.state.commentno}</span>
+                            <i className="fa fa-comment"></i>
+                            <span id="no">{this.state.commentno}</span>
                             <i
                                 className="fa fa-thumbs-o-up"
-                                style={{fontSize: "42px"}}
                                 id={upvote==="true"? "upvote": ""}
                             ></i>
-                            <span>{this.state.count}</span>
+                            <span id="no">{this.state.count}</span>
                         </div>
                     </div>
 
