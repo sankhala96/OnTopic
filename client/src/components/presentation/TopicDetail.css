@@ -1,6 +1,5 @@
 #question-detail{
     background-color: #ffffff;
-    height: 200px;
     margin-bottom: 40px;
 }
 
@@ -8,31 +7,40 @@
     display: inline-block;
     float: left;
     margin: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: center;
 }
 
-#detail{
-    display: inline-block;
+#topic-detail{
     margin: 20px;
-    padding-left: 40px;
+    padding: 20px;
 }
 
-#voting{
-   display: inline-block;
-    float: right;
-    padding: 20px;
-    border-left: 1px solid #dddddd;
-    height: 100%;
+#topic-detail h4{
+    text-decoration: none;
+    color: #a01517;
+}
+
+#topic-detail p{
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 450px){
+    #topic-detail{
+        display: inline-block;
+    }
+}
+
+
+#voting {
+
 }
 
 #votebox{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    width: 80px;
     font-size: 25px;
-    margin-top: 20px;
 }
 
 .vote {

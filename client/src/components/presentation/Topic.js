@@ -71,21 +71,27 @@ class Topic extends React.Component {
                     </div>
 
                     <div className="content">
-                        <Link to={"/topic/" + _id} style={{textDecoration: 'none'}}><h3>{question}</h3></Link>
+                        <Link to={"/topic/" + _id} style={{textDecoration: 'none'}}><h4>{question}</h4></Link>
                         <p>
                             {desc}
                         </p>
-                        <span>{timestamp}</span><span>|{category}</span>
                     </div>
+                    <hr/>
                     <div className="detail">
                         <div id="detail-inner">
                             <i className="fa fa-comment"></i>
                             <span id="no">{this.state.commentno}</span>
+                            <span style={{padding: "10px"}}></span>
                             <i
                                 className="fa fa-thumbs-o-up"
                                 id={upvote==="true"? "upvote": ""}
                             ></i>
                             <span id="no">{this.state.count}</span>
+                            <hr/>
+                            <div id="time">
+                                <span >{timestamp}</span>
+                                <span> |{category}</span>
+                            </div>
                         </div>
                     </div>
 

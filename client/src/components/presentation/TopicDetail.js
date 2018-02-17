@@ -60,13 +60,14 @@ class TopicDetail extends React.Component{
                         <hr/>
                         <span>{username}</span>
                     </div>
-                    <div id="detail">
-                        <h1>{question}</h1>
+                    <div id="topic-detail">
+                        <h4>{question}</h4>
 
                         <p>
                             {desc}
                         </p>
                     </div>
+                    <hr/>
                     <div id="voting">
                         <div id="votebox">
                             <span

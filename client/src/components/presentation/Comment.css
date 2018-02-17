@@ -1,6 +1,5 @@
 #comment-detail{
     background-color: #ffffff;
-    height: 150px;
     margin-bottom: 40px;
 }
 
@@ -13,8 +12,8 @@
 }
 
 #detail{
-    display: inline-block;
     margin: 20px;
+    padding: 20px;
 }
 
 #detail p{
@@ -26,17 +25,18 @@
     width: 100%;
 }
 
-#voting-comment{
-    height: 30px;
+@media screen and (max-width: 450px){
+    #detail{
+        display: inline-block;
+    }
 }
+
 
 #votebox-comment{
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 100%;
     font-size: 25px;
-    margin-top: 20px;
 }
 
 .vote {

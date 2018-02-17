@@ -63,18 +63,16 @@ class Comment extends React.Component {
                     <p>
                         {body}
                     </p>
-                    <hr/>
-
-                    <div id="voting-comment">
-                        <div id="votebox-comment">
-                            <span
-                                className="fa fa-thumbs-o-up vote up"
-                                id={upvote==="true"? "upvote": ""}
-                                onClick={this.upClick}></span>
-                            <span className="vote-count" id={upvote==="true"? "upvote": ""}>{this.state.count}</span>
-                        </div>
+                </div>
+                <hr/>
+                <div id="voting-comment">
+                    <div id="votebox-comment">
+                        <span
+                            className="fa fa-thumbs-o-up vote up"
+                            id={upvote==="true"? "upvote": ""}
+                            onClick={this.upClick}></span>
+                        <span className="vote-count" id={upvote==="true"? "upvote": ""}>{this.state.count}</span>
                     </div>
-
                 </div>
             </div>
         )
