@@ -1,0 +1,10 @@
+#topic-page{
+    background-color: #dddddd;
+    padding: 50px;
+}
+
+@media screen and (max-width: 450px){
+    #topic-page{
+        padding: 50px 20px;
+    }
+}

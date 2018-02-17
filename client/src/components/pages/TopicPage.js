@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from "react-redux";
 import { get_topic, vote } from "../../actions/users";
 import PropTypes from 'prop-types'
+import './TopicPage.css'
 import TopNavigation from '../navigation/TopNavigation'
 import TopicDetail from '../presentation/TopicDetail'
 import Comments from "../containers/Comments";
@@ -32,7 +33,7 @@ class TopicPage extends React.Component {
                 <div>
                     <TopNavigation/>
                 </div>
-                <div className="container-fluid" style={{backgroundColor: "#dddddd", padding: "50px"}}>
+                <div className="container-fluid" id="topic-page">
                     <div className="container">
                         <TopicDetail topicDetail={this.state.data} id = {this.props.match.params.id} upClick={this.upClick}/>
                     </div>
