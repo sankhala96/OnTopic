@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
     };
 
     responseGoogle = (response) => {
-        this.props.responseGoogle(response.profileObj);
+        this.props.responseGoogle(response);
         console.log(response.profileObj);
     };
 
