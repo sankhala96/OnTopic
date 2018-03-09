@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Validator from "validator";
+import GoogleLogin from 'react-google-login';
+
 
 class LoginForm extends React.Component {
     state = {
@@ -36,6 +38,11 @@ class LoginForm extends React.Component {
         if (!Validator.isEmail(data.email)) errors.email = "Invalid email";
         if (!data.password) errors.password = "Can't be blank";
         return errors;
+    };
+
+    responseGoogle = (response) => {
+        this.props.responseGoogle(response.profileObj);
+        console.log(response.profileObj);
     };
 
     render() {
@@ -85,6 +92,14 @@ class LoginForm extends React.Component {
                     <Link to="/signup">Sign up</Link> if you don't have an account<br />
                     <Link to="/forgot_password">Forgot Password?</Link>
                 </small>
+                <div style={{paddingTop: '10px', textAlign:'center'}}>
+                    <GoogleLogin
+                        clientId="1006511207493-vd9t86gt62lbe24l88hc5uso8h3vv3e9.apps.googleusercontent.com"
+                        buttonText="Login with Google"
+                        onSuccess={this.responseGoogle}
+                        onFailure={this.responseGoogle}
+                    />
+                </div>
             </form>
         );
     }

@@ -18,11 +18,16 @@ const schema = new mongoose.Schema(
             index: true,
             unique: true
         },
-        passwordHash: { type: String, required: true },
-        confirmed: { type: Boolean, default: false },
-        confirmationToken: { type: String, default: "" }
-    },
-    { timestamps: true }
+        passwordHash: {type: String},
+        confirmed: {type: Boolean, default: false},
+        confirmationToken: {type: String, default: ""},
+        imageUrl: {
+            type: String
+        },
+        googleId: {
+            type: String
+        },
+    }
 );
 
 schema.methods.isValidPassword = function isValidPassword(password) {
@@ -54,6 +59,7 @@ schema.methods.generateJWT = function generateJWT() {
     );
 };
 
+
 schema.methods.generateResetPasswordToken = function generateResetPasswordToken() {
     return jwt.sign({
             _id: this._id
@@ -70,6 +76,7 @@ schema.methods.toAuthJSON = function toAuthJSON() {
         token: this.generateJWT()
     }
 };
+
 
 schema.plugin(uniqueValidator, { message: "It is already taken, try another one."});
 

@@ -18,6 +18,13 @@ export const login = credentials => dispatch =>
         dispatch(userLoggedIn({...user, loaded: true}))
     });
 
+export const google = response => dispatch =>
+    api.user.google(response).then(user => {
+        localStorage.alhubJWT = user.token;
+        setAuthorizationHeader(user.token);
+        dispatch(userLoggedIn({...user, loaded: true}))
+    });
+
 export const logout = () => dispatch =>
 {
     localStorage.removeItem("alhubJWT");

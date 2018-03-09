@@ -10,7 +10,9 @@ const router = express.Router();
 
 router.post("/", (req, res) => {
     const { email, password, username } = req.body.user;
-    const user = new User({ email, username });
+    const user = new User();
+    user.email = email;
+    user.username = username;
     user.setPassword(password);
     user.setConfirmationToken();
     user

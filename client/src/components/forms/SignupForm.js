@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import isEmail from 'validator/lib/isEmail'
 
-class SignupForm extends Component{
+class SignupForm extends React.Component{
     state ={
         data: {
             email : "",
