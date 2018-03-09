@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
 router.post("/google", (req, res) => {
    const { response } = req.body;
    console.log(response);
-   User.findOne({email: response.email}, function (err, user) {
+   User.findOne({googleId: response.googleId}, function (err, user) {
        if(err){
            res.status(400).json({ errors: { global: "Invalid credentials" } })
        }
