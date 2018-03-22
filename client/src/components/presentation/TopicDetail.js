@@ -49,12 +49,12 @@ class TopicDetail extends React.Component{
 
     render(){
         const {upvote} = this.state.data;
-        const { question, username, desc, category, timestamp, _id} = this.props.topicDetail;
+        const { question, username, desc, category, timestamp, _id, imageUrl} = this.props.topicDetail;
         return(
                 <div className="container" id="question-detail">
                     <div id="user">
                         <img className="img-fluid rounded-circle"
-                             src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                             src= {imageUrl}
                              style={{width: "60px"}}
                              alt="Gravatar"/><br/>
                         <hr/>

@@ -47,13 +47,13 @@ class Comment extends React.Component {
 
     render(){
         console.log();
-        const {body, username} = this.props.comment;
+        const {body, username,imageUrl} = this.props.comment;
         const {upvote} = this.state.data;
         return(
             <div className="container" id="comment-detail">
                 <div id="user">
                     <img className="img-fluid rounded-circle"
-                         src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                         src= {imageUrl}
                          style={{width: "60px"}}
                          alt="Gravatar"/><br/>
                     <hr/>

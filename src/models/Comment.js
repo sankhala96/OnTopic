@@ -15,6 +15,10 @@ const schema = new mongoose.Schema(
             required: true,
             index: true
         },
+        imageUrl: {
+            type: String,
+            default: 'https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png'
+        },
         count: {
             type: Number,
             default: 0

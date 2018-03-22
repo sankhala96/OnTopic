@@ -35,7 +35,7 @@ class ProfilePage extends React.Component{
                     <div className="container" id="profile">
                         <div id="profile-user">
                             <img className="img-fluid rounded-circle"
-                                 src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                                 src= {this.props.user.imageUrl}
                                  style={{width: "100px"}}
                                  alt="Gravatar"/>
                         </div>

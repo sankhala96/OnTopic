@@ -22,7 +22,8 @@ const schema = new mongoose.Schema(
         confirmed: {type: Boolean, default: false},
         confirmationToken: {type: String, default: ""},
         imageUrl: {
-            type: String
+            type: String,
+            default: 'https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png'
         },
         googleId: {
             type: String

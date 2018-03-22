@@ -89,7 +89,7 @@ class TopNavigation extends React.Component {
                                 <DropdownToggle nav>
                                     <img
                                         className="img-fluid rounded-circle"
-                                        src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                                        src= {user.imageUrl}
                                         style={{width: "60px"}}
                                         alt="Gravatar"
                                     />

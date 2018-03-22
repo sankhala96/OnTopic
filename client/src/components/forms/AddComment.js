@@ -7,7 +7,8 @@ class AddComment extends React.Component{
         comment: {
             quesId: this.props.id,
             body: "",
-            username: this.props.username
+            username: this.props.username,
+            imageUrl: this.props.imageUrl
         },
         errors : {}
     };
@@ -78,7 +79,8 @@ class AddComment extends React.Component{
 
 function mapStateToProps(state) {
     return {
-        username: state.user.username
+        username: state.user.username,
+        imageUrl: state.user.imageUrl
     }
 }
 

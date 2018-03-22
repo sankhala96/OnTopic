@@ -58,12 +58,12 @@ class Topic extends React.Component {
     render(){
         const {upvote} = this.state.data;
         const { isConfirmed } = this.props;
-        const { question, username, desc, category, timestamp, _id } = this.props.currentTopic;
+        const { question, username, desc, category, timestamp, _id, imageUrl } = this.props.currentTopic;
         return(
                 <div id="wrapper-topic" className="container">
                     <div id="user">
                         <img className="img-fluid rounded-circle"
-                             src= "https://cdn.woorkup.com/wp-content/uploads/2016/04/gravatar.png"
+                             src= {imageUrl}
                              style={{width: "60px"}}
                              alt="Gravatar"/><br/>
                         <hr/>

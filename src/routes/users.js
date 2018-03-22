@@ -29,14 +29,15 @@ router.get("/current_user", authenticate, (req, res) => {
        user: {
            email: req.currentUser.email,
            confirmed: req.currentUser.confirmed,
-           username: req.currentUser.username
+           username: req.currentUser.username,
+           imageUrl: req.currentUser.imageUrl
        }
    })
 });
 
 router.post("/add_question", (req, res) => {
-    const { question, desc, category, username} = req.body.data;
-    const topic = new Question({ question, desc, category, username});
+    const { question, desc, category, username, imageUrl} = req.body.data;
+    const topic = new Question({ question, desc, category, username, imageUrl});
     topic
         .save()
         .then(ques => {
@@ -107,9 +108,9 @@ router.get("/get_topic/:id", (req, res) => {
 });
 
 router.post("/add_comment", (req, res) => {
-   const { quesId, body, username} = req.body.data;
+   const { quesId, body, username, imageUrl} = req.body.data;
    //console.log(body)
-    const comment = new Comment({ quesId, body, username});
+    const comment = new Comment({ quesId, body, username, imageUrl});
     comment
         .save()
         .then(comment => {
