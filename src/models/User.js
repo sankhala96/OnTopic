@@ -28,6 +28,9 @@ const schema = new mongoose.Schema(
         googleId: {
             type: String
         },
+        facebookId: {
+            type: String
+        }
     }
 );
 

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import LoginForm from "../forms/LoginForm";
-import { login, google } from "../../actions/auth";
+import { login, google, facebook } from "../../actions/auth";
 
 class LoginPage extends React.Component {
     submit = data =>
@@ -10,6 +10,10 @@ class LoginPage extends React.Component {
 
     responseGoogle = response => {
         this.props.google(response).then(() => this.props.history.push("/dashboard"))
+    };
+
+    responseFacebook = response => {
+        this.props.facebook(response).then(() => this.props.history.push("/dashboard"))
     };
 
     render() {
@@ -25,7 +29,7 @@ class LoginPage extends React.Component {
                             <div className="card">
                                 <h2 className="card-header">Welcome Back!</h2>
                                 <div className="card-body">
-                                    <LoginForm submit={this.submit} responseGoogle={this.responseGoogle} />
+                                    <LoginForm submit={this.submit} responseGoogle={this.responseGoogle} responseFacebook={this.responseFacebook} />
                                 </div>
                             </div>
                         </div>
@@ -43,4 +47,4 @@ LoginPage.propTypes = {
     login: PropTypes.func.isRequired
 };
 
-export default connect(null, { login, google })(LoginPage);
+export default connect(null, { login, google, facebook })(LoginPage);

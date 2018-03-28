@@ -43,6 +43,7 @@ class DashboardPage extends React.Component {
                             <ul id="category">
                                 {listItem}
                             </ul>
+
                         </div>
 
                         <div className="col-xs-12 col-sm-6 container-fluid" style={{margin: "0", width:"100%"}}>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Validator from "validator";
 import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login'
 
 
 class LoginForm extends React.Component {
@@ -42,6 +43,11 @@ class LoginForm extends React.Component {
 
     responseGoogle = (response) => {
         this.props.responseGoogle(response);
+        console.log(response);
+    };
+
+    responseFacebook = (response) => {
+        this.props.responseFacebook(response);
         console.log(response);
     };
 
@@ -100,6 +106,17 @@ class LoginForm extends React.Component {
                         onFailure={this.responseGoogle}
                     />
                 </div>
+                <div style={{paddingTop: '10px', textAlign:'center'}} >OR</div>
+                <div style={{paddingTop: '10px', textAlign:'center'}} >
+                    <FacebookLogin
+                        appId="644225665917002"
+                        fields="name,email,picture"
+                        callback={this.responseFacebook}
+                        cssClass="my-facebook-button-class"
+                        icon="fa-facebook"
+                    />
+                </div>
+
             </form>
         );
     }

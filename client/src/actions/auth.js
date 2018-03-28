@@ -25,6 +25,13 @@ export const google = response => dispatch =>
         dispatch(userLoggedIn({...user, loaded: true}))
     });
 
+export const facebook = response => dispatch =>
+    api.user.facebook(response).then(user => {
+        localStorage.alhubJWT = user.token;
+        setAuthorizationHeader(user.token);
+        dispatch(userLoggedIn({...user, loaded: true}))
+    });
+
 export const logout = () => dispatch =>
 {
     localStorage.removeItem("alhubJWT");

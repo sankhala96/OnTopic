@@ -44,6 +44,33 @@ router.post("/google", (req, res) => {
    })
 });
 
+router.post("/facebook", (req, res) => {
+    const { response } = req.body;
+    console.log(response);
+    User.findOne({facebookId: response.id}, function (err, user) {
+        if(err){
+            res.status(400).json({ errors: { global: "Invalid credentials" } })
+        }
+        if(user){
+            res.json({ user: user.toAuthJSON() });
+        }
+        else{
+            //const { facebookId, email, name, imageUrl = response;
+            const user = new User();
+            user.facebookId = response.id;
+            user.email = response.email;
+            user.username = response.name;
+            user.imageUrl = response.picture.data.url;
+
+            user.setConfirmationToken();
+            user.save().then(user => {
+                sendConfirmationEmail(user);
+                res.json({ user: user.toAuthJSON() });
+            })
+        }
+    })
+});
+
 router.post("/confirmation", (req, res) => {
     const token = req.body.token;
     User.findOneAndUpdate(
