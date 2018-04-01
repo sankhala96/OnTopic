@@ -26,7 +26,9 @@ class HomePage extends React.Component{
 
                             <TypedReactDemo
                                 strings={[
-                                    'Learn,  <i>Share </i>& Solve!'
+                                    'Learn',
+                                    '<i>Share </i>',
+                                    '& Solve!'
                                 ]}
                             />
                         </Col>

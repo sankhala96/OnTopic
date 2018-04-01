@@ -18,6 +18,7 @@ import UserRoute from './components/routes/UserRoute'
 import {fetchCurrentUser} from './actions/users'
 import messages from "./messages"
 import ProfilePage from "./components/pages/ProfilePage";
+import About from "./components/pages/About"
 
 class App extends React.Component {
     componentDidMount() {
@@ -41,6 +42,7 @@ class App extends React.Component {
                         <UserRoute location={location} path="/topic/:id" exact component={TopicPage} />
                         <UserRoute location={location} path="/addquestion" exact component={AddQuestionPage} />
                         <UserRoute location={location} path="/profile" exact component={ProfilePage}/>
+                        <UserRoute location={location} path="/about" exact component={About}/>
                     </Loader>
                 </div>
             </IntlProvider>
