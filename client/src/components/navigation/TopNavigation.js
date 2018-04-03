@@ -31,7 +31,7 @@ class TopNavigation extends React.Component {
         const { user, logout } = this.props;
 
         return (
-            <div className="container-fluid" style={{padding: "0"}}>
+            <div className="container-fluid" style={{padding: "0", backgroundColor: "#000"}}>
                 <div className="container-fluid" id="header" style={{
                     height: "250px",
                     padding: "0"
@@ -40,7 +40,7 @@ class TopNavigation extends React.Component {
                         params={{
                             particles: {
                                 number: {
-                                    value:80,
+                                    value:150,
                                     density: {
                                         enable: true,
                                         value_area: 800
@@ -146,13 +146,13 @@ class TopNavigation extends React.Component {
                         style={{
                             width: '100%',
                             maxHeight: '250px',
-                            backgroundColor: '#b61924'
+                            backgroundColor: '#000'
                         }}
                     />
 
                     {/*<img id="image-header" src="https://www.ontopic.today/wp-content/uploads/Logo_332x100.png" />*/}
                 </div>
-                <Navbar light expand="sm" color="faded">
+                <Navbar dark expand="sm" color="faded">
                     <NavbarBrand tag={RouterNavLink} activeClassName="active" to="/">
                         <img style={{height: "60px"}}
                              src="https://www.ontopic.today/wp-content/uploads/Logo_332x100.png"

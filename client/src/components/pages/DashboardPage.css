@@ -12,7 +12,8 @@
 /* Sidebar styling - the entire ul list */
 #sidebar-nav {
     list-style: none;
-    background-color: white;
+    color: white;
+    background-color: #000000;
     max-width: 250px;
     max-height: 250px;
     margin: 0;
@@ -40,6 +41,6 @@
 }
 
 #content{
-    background-color: #CCD1D1;
-    /*background-image: url("../../public/stars_in_the_sky-wallpaper-1366x768.jpg");*/
+    /*background-color: #80ccff;*/
+    background-image: url("../../public/Blue-Textured-Wallpaper-24-1920x1200.jpg");
 }

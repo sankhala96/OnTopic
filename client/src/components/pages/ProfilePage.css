@@ -1,13 +1,15 @@
 #profile-main{
     padding: 0;
-    background-color: #dddddd;
+    background-color: #ffffff;
+    background-image: url("../../public/Blue-Textured-Wallpaper-24-1920x1200.jpg");
     padding-top: 30px;
 }
 
 #profile{
-    background-color: #ffffff;
+    background-color: #000000;
     padding-top: 30px;
     padding-bottom: 30px;
+    color: #ffffff;
 }
 
 #profile-user{
@@ -20,7 +22,8 @@
 }
 
 #profile-feeds{
-    background-color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;

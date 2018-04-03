@@ -1,5 +1,5 @@
 #comment-detail{
-    background-color: #ffffff;
+    background-color: #e6e6e6;
     margin-bottom: 40px;
 }
 
@@ -9,6 +9,7 @@
     margin: 10px;
     padding-top: 10px;
     text-align: center;
+    color: #000000;
 }
 
 #detail{

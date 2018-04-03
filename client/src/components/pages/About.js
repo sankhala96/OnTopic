@@ -12,7 +12,6 @@ class About extends React.Component {
 
                 <div className="row"
                      style={{
-                        backgroundColor: "#CCD1D1",
                         width: "100%",
                          height: "350px",
                          padding: 0,
