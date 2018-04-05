@@ -148,9 +148,11 @@ class TopNavigation extends React.Component {
                             maxHeight: '250px',
                             backgroundColor: '#000'
                         }}
-                    />
+                    >
+                        {/*<img style={{position: "absolute"}} id="image-header" src="https://www.ontopic.today/wp-content/uploads/Logo_332x100.png" />*/}
+                    </Particles>
 
-                    {/*<img id="image-header" src="https://www.ontopic.today/wp-content/uploads/Logo_332x100.png" />*/}
+                    <img style={{position: "absolute",top: "100px", left: "150px"}} id="image-header" src="https://www.ontopic.today/wp-content/uploads/Logo_332x100.png" />
                 </div>
                 <Navbar dark expand="sm" color="faded">
                     <NavbarBrand tag={RouterNavLink} activeClassName="active" to="/">
